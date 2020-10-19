@@ -269,7 +269,9 @@ genre_id int,
 game_name varchar(200)
 )
 row format delimited
-fields terminated by ',';
+fields terminated by ','
+location '/user/input/mysql/game';
+
 load data inpath '/user/input/mysql/game' into table game;
 
 
@@ -283,7 +285,9 @@ platform_id int,
 release_year int 
 )
 row format delimited
-fields terminated by ',';
+fields terminated by ','
+location '/user/input/mysql/game_platform';
+
 load data inpath '/user/input/mysql/game_platform' into table game_platform;
 
 
@@ -296,7 +300,9 @@ game_id int,
 publisher_id int
 )
 row format delimited
-fields terminated by ',';
+fields terminated by ','
+location '/user/input/mysql/game_publisher';
+
 load data inpath '/user/input/mysql/game_publisher' into table game_publisher;
 
 
@@ -308,7 +314,9 @@ id smallint,
 genre_name VARCHAR (100)
 )
 row format delimited
-fields terminated by ',';
+fields terminated by ','
+location '/user/input/postgress/genre';
+
 load data inpath '/user/input/postgress/genre' into table genre;
 
 
@@ -320,7 +328,9 @@ id smallint,
 platform_name VARCHAR (100)
 )
 row format delimited
-fields terminated by ',';
+fields terminated by ','
+location '/user/input/postgress/platform';
+
 load data inpath '/user/input/postgress/platform' into table platform;
 
 
@@ -332,7 +342,9 @@ id smallint,
 publisher_name VARCHAR (100)
 )
 row format delimited
-fields terminated by ',';
+fields terminated by ','
+location '/user/input/postgress/publisher';
+
 load data inpath '/user/input/postgress/publisher' into table publisher;
 
 
@@ -362,7 +374,9 @@ complexunitsmade FLOAT,
 complexabilitiesused Float
 )
 row format delimited
-fields terminated by ',';
+fields terminated by ','
+location '/user/input/sql-server/skillcraft1_dataset';
+
 load data inpath '/user/input/sql-server/skillcraft1_dataset' into table skillcraft1_dataset;
 
 
@@ -383,7 +397,9 @@ Other_Sales Float,
 lobal_Sales Float
 )
 row format delimited
-fields terminated by ',';
+fields terminated by ','
+location '/user/input/sql-server/vgsales';
+
 load data  inpath '/user/input/sql-server/vgsales' into table vgsales;
 
 
@@ -397,11 +413,11 @@ VG2Title VARCHAR(255),
 VG3Title VARCHAR(255)
 )
 row format delimited
-fields terminated by ',';
+fields terminated by ','
+location '/user/input/sql-server/Video_games_listed';
+
 load data  inpath '/user/input/sql-server/Video_games_listed' into table Video_games_listed;
 
-
-# Hive-External-to-Internal
 
 #Moving External to Internal files
 
